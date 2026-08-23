@@ -1,0 +1,28 @@
+{
+  "name": "pageobjectmodeljulweekend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_dev": "cross-env ENV_NAME=dev npx playwright test",
+    "test_demo": "cross-env ENV_NAME=demo npx playwright test api-tests/herokuapp-api-modules.spec.ts",
+    "test_uat": "cross-env ENV_NAME=uat npx playwright test",
+    "test_demo_chr_hd": "cross-env ENV_NAME=demo npx playwright test --project=chromium --headed",
+    "test_demo_api": "cross-env ENV_NAME=demo npx playwright test --project=api-test",
+    "test_dev_api": "cross-env ENV_NAME=dev npx playwright test --project=api-test",
+    "test_demo_api_uat": "cross-env ENV_NAME=demo npx playwright test --project=api-test --grep @UAT"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.2.0",
+    "cross-env": "^10.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
